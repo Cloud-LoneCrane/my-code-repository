@@ -1,0 +1,2 @@
+
+PostMessage(WM_COMMAND, MAKEWPARAM(Contrl_ID, BN_CLICKED), NULL);

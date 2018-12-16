@@ -1,0 +1,5 @@
+::【批处理设置静态IP】**********  复制以下内容保存为bat
+netsh interface ip  set address name="本地连接"   source = static addr = 192.168.1.100  mask=255.255.0.0     
+netsh interface ip set address  name="本地连接" gateway = 192.168.1.1 gwmetric =0
+netsh interface ip set dns name="本地连接" source = static  addr = 202.101.224.68 register=PRIMARY
+netsh interface ip add dns name="本地连接" addr = 202.101.224.6 index=2

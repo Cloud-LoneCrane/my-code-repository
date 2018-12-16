@@ -1,0 +1,9 @@
+cd C:\Program Files\VisualSVN Server\bin
+
+备份
+svnadmin.exe dump F:\Repositories\jiftle>"F:\svn_all_2010-06-04.dump"
+
+还原
+svnadmin load F:\Repositories\test< F:\svn_all_2010-06-04.dump
+
+https://lixu/svn/test/

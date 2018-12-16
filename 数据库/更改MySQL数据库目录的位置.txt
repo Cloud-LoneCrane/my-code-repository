@@ -1,0 +1,18 @@
+Linux Windows MySQL 更改MySQL数据库目录的位置
+发布: 2009-4-27 16:32 |  作者: PHPDIY |   来源: CSDN博客 |  查看: 0次
+
+先看my.ini文件，里面有指定数据文件位置的选项
+
+datadir=”D:/mysql/Data/”
+
+先不急着操作，先停掉mysql,windows :net stop mysql，linux:mysqladmin -uzenk shutdown
+
+然后再数据文件夹整个复制到目标位置，如 windows,f:\data,linu: /usr/data
+
+然后修改my.ini或my.cnf
+
+datadir=”F:/data/”
+
+启动mysql
+
+from : http://www.zhuosong.com/zenk/archives/13

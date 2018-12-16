@@ -1,0 +1,10 @@
+
+SQL Server 2005 ¡¢2008
+------------------------
+windowsµÇÂ¼Ä£Ê½
+=================================
+Data Source=localhost;Initial Catalog=master;Integrated Security=false;User ID=sa;Password=jift
+
+saµÇÂ¼
+=================================
+Data Source=localhost;Initial Catalog=master;Integrated Security=false;User ID=sa;Password=jift

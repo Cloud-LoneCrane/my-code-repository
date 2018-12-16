@@ -1,0 +1,1 @@
+netsh interface ip set address name="本地连接" gateway=192.168.100.100 gwmetric=0 

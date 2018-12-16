@@ -1,0 +1,1 @@
+SystemParametersInfo(20, True, Í¼Æ¬Â·¾¶, 1)

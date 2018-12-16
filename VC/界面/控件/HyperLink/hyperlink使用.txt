@@ -1,0 +1,27 @@
+使用CHyperLink类为静态文本添加超链接的方法
+2008-07-13 23:08
+１．当然每一步是建立一个应用MFC应用程序对话框，工程名为HyperLink然后把CHyperLink这个类的头文件和源文件拷到该工程文件夹内．
+
+２．将CHyperLink添加到工作区．（选择Project->Add Project->File，同时选中CHyperLink的头文件和源文件，点击OK按键），这时在工程区中我们就能看到这个类了．
+
+３．在编辑器中为其添加一个静态文本（增加一个static控件），设置一个该文本控件的标题，为了介绍，这设置为http://hqlong.phpoo.cn．并设置ID为IDC_HYPERLINK．
+
+４．接下来为该static文本控件关联一个CHyperLink类型的变量，提醒一下，CHyperLink是从CStatic类派生而来，所以他继承了CStatic类的所以公共成员函数．关于具体仔细，可以参考该源代码．http://hi.baidu.com/%D0%BB%B4%BA%D2%B5/blog/item/86063816f511b44f21a4e953.html ．由于静态文本控件不能像其它控件那样，使用向导工具自动关联变量，所以需要手动关联．方法如下：
+
+首先在CHyperLinkDlg类中添加一成员变量．
+
+
+public:     CHyperLink    m_HyperLink;然后在该类（CHyperLinkDlg）的DoDataExchange(CDataExchange* pDX)成员函数中添加如下代码．
+
+
+DDX_Control(pDX, IDC_HYPERLINK, m_HyperLink);
+DDX_Control宏将完成先前我们所设置的文件控件和m_HyperLink的关联．
+
+５．转到OnInitDialog()，在该函数最后添加如下代码：
+
+
+ //设置超链接  CString sUrl = "http://www.feiyiban.cn"; m_HyperLink.SetURL(sUrl); m_HyperLink.SetUnderline(FALSE);//去掉下划线最后，不要忘了，还要在文件头处添加CHyperLink类的头文件．
+
+
+#include "HyperLink.h"再起编辑运行，就可以看见效果了.
+ 
